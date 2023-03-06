@@ -12,6 +12,7 @@ function registrar(){
       telefono: telefono,
       contrasenia: contrasenia
     };
+
     if (localStorage.getItem("cuentas") === null) {
       var cuentas = [];
     } 
@@ -19,12 +20,14 @@ function registrar(){
       var cuentas = JSON.parse(localStorage.getItem("cuentas"));
     }
     
+    cuentas.push(cuenta);
+    localStorage.setItem(cuenta, JSON.stringify(cuentas));
         document.getElementById("nombre").value = "";
         document.getElementById("apellido").value = "";
         document.getElementById("email").value = "";
         document.getElementById("telefono").value = "";
         document.getElementById("contrasenia").value = "";
-    
+
     alert("Cuenta registrada correctamente");
   }
 
@@ -32,8 +35,12 @@ function registrar(){
 function ingresar(){
   var  users = Helper.getUsersFromLocalStorage();
 
+
+
+
+
 function logiUser(){
-    let email = document.getElementById('email');
+    var email = document.getElementById('email');
     let telefono = document.getElementById('telefono');
     let contrasenia = document.getElementById('contrasenia');
 
@@ -42,10 +49,7 @@ function logiUser(){
 
     let login = user1.login(users)
     login != true ? alert(login) : window.location.href ="hok.html";
-
-    
 }
-
 
 }
 
