@@ -1,4 +1,4 @@
-function registrar() {
+function registrar(){
     var nombre = document.getElementById("nombre").value;
     var apellido = document.getElementById("apellido").value;
     var email = document.getElementById("email").value;
@@ -29,5 +29,8 @@ function registrar() {
     alert("Cuenta registrada correctamente");
   }
 
-  cuentas.push(cuenta);
-    localStorage.setItem("cuentas", JSON.stringify(cuentas));
+  
+function ingresar(){
+
+
+}
