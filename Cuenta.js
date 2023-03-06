@@ -1,15 +1,14 @@
-class Cajero {
+class Cajero extends Persona{
     correo;
     Correo_Resp;
     Telefono;
-    #Contrasena;
- Persona
+    Contrasena;
 
     constructor(email, email2, phone, password){
         this.correo = email;
         this.Correo_Resp = email2;
         this.Telefono = phone;
-        this.#Contrasena = password;
+        this.Contrasena = password;
     }
 
 
@@ -26,7 +25,7 @@ class Cajero {
 
     }
     actualizarContrasena = function(Contrasena){
-            this.#Contrasena = Contrasena;
+            this.Contrasena = Contrasena;
     }
 
     actualizarCorreos_Resp = function(Correo_Resp){
