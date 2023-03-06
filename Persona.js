@@ -3,19 +3,21 @@ class Persona {
     Apellidos;
     FechaNac;
     Telefono;
-    #Docmicilio;
-    #Curp;
-    #Rfc;
-    #ClaveElect;
+    Docmicilio;
+    Email;
+    Curp;
+    Rfc;
+    ClaveElect;
 
-    constructor(name,lastename,date,dom,rfc,clave,Tel){
+    constructor(name,lastename,date,dom,rfc,clave,Tel,email){
         this.Nombre = name;
         this.Apellidos = lastename
         this.FechaNac = date;
         this.Telefono = Tel;
-        this.#Domicilio = dom;
-        this.#Rfc = rfc;
-        this.#ClaveElect = clave;
+        this.Domicilio = dom;
+        this.Email = email
+        this.Rfc = rfc;
+        this.ClaveElect = clave;
 
     }
        /**
@@ -23,7 +25,7 @@ class Persona {
         * @returns {string}
         */
     getCurp = function(){
-        return (this.#Curp) ;
+        return (this.Curp) ;
     }
 
     /**
@@ -40,7 +42,7 @@ class Persona {
      * @param {string} INE 
      */
     getClaveElect = function(){
-        return (this.#ClaveElect);
+        return (this.ClaveElect);
     }
 
     /**
@@ -48,7 +50,7 @@ class Persona {
      * @param {string} Adress 
      */
     ActualizarDomicilio = function(Adress){
-        this.#Domicilio = Adress
+        this.Domicilio = Adress
     }
 
     /**
