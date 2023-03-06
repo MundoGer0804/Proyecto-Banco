@@ -62,7 +62,7 @@
                 <label for="telefono" class="text-left">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono" class="form-control text-left">
         
-                <label for="contrasenia" class="text-left">Contraseña</label>
+                <label for="contrasenia" class="text-left">Contraseña:</label>
                 <input type="password" id="contrasenia" name="contrasenia" class="form-control text-left">
         
                 <button class="btn btn-success" id="boton" onclick="registrar()">Registrar cuenta</button>
@@ -85,26 +85,43 @@
                 <label for="telefono" class="text-left">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono" class="form-control text-left">
         
-                <label for="contrasenia" class="text-left">Contraseña</label>
+                <label for="contrasenia" class="text-left">Contraseña:</label>
                 <input type="password" id="contrasenia" name="contrasenia" class="form-control text-left">
         
-                <button class="btn btn-success" id="boton" onclick="ingresar()">Ingresar</button>
+                <button class="btn btn-warning" id="boton" onclick="ingresar()">Ingresar</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
       <div class="row justify-content-center">
         <div class="col-md-6 mx-auto">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Administración (Solo empleados)</h5>
-              <p class="card-text">Si eres trabajador de Banco DUCKSNAKE, aquí puedes ver tus datos:</p>
-              <button class="btn btn-primary" id="boton" onclick="alert('Este apartado es solo para empleados, por favor inicia sesión para verificar que eres uno de ellos.')">Ir</a>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Administración (Solo empleados)</h5>
+                    <p class="card-text">Si eres trabajador de Banco DUCKSNAKE, aquí puedes ver tus datos:</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group form-container">
+                                <label for="email" class="text-left">Ingresa Id:</label>
+                                <input type="Id" id="Id" name="Id" class="form-control text-left">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group form-container">
+                                <label for="contrasenia" class="text-left">Contraseña:</label>
+                                <input type="password" id="contrasenia" name="contrasenia" class="form-control text-left">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-danger" id="boton" onclick="ingresar()">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
         
       </div>
       </div>
