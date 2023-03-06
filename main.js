@@ -12,7 +12,6 @@ function registrar(){
       telefono: telefono,
       contrasenia: contrasenia
     };
-    
     if (localStorage.getItem("cuentas") === null) {
       var cuentas = [];
     } 
@@ -27,10 +26,14 @@ function registrar(){
         document.getElementById("contrasenia").value = "";
     
     alert("Cuenta registrada correctamente");
-  }
+  
+  
+  cuentas.push(cuenta);
+}
+    
 
   
-function ingresar(){
+function ActualizarDatos(){
 
 
 }
