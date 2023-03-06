@@ -31,6 +31,21 @@ function registrar(){
 
   
 function ingresar(){
+  var  users = Helper.getUsersFromLocalStorage();
+
+function logiUser(){
+    let email = document.getElementById('email');
+    let telefono = document.getElementById('telefono');
+    let contrasenia = document.getElementById('contrasenia');
+
+
+    let user1 = new User(email.value, telefono.value, contrasenia.value);
+
+    let login = user1.login(users)
+    login != true ? alert(login) : window.location.href ="hok.html";
+
+    
+}
 
 
 }
