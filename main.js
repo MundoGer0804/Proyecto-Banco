@@ -33,3 +33,17 @@ function ingresar(){
 
 
 }
+
+CheckSalaryWeek=function(salary){
+  let horasTrabajadas;
+  let salarioPorHora;
+  let sueldoSemanal;
+
+  horasTrabajadas = prompt("Introduce las horas trabajadas en la semana:");
+  salarioPorHora = prompt("Introduce el salario por hora:");
+
+  sueldoSemanal = horasTrabajadas * salarioPorHora;
+
+  console.log("El sueldo semanal del empleado es de: " + sueldoSemanal + " pesos.");
+
+}
