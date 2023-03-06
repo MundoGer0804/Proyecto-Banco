@@ -1,2 +1,8 @@
+function GuardarLocal(datos,param){
+    localStorage.setItem(datos, JSON.stringify(param));
 
-localStorage.setItem("cuentas", JSON.stringify(cuentas));
+}
+
+function SacarLocal(datos){
+    localStorage.getItem(datos);
+}
