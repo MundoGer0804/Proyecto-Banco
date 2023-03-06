@@ -13,61 +13,85 @@
     
   </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <img src="https://scontent.fmex26-1.fna.fbcdn.net/v/t1.15752-9/332557695_1297594064127820_4097500698539536437_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFTK7ksrMePA42m8tnoJVU4cbr1HOpxhwBxuvUc6nGHAJFpvxcBSVfU8uyEp9wb2HrkrDXAKxy9qR-BN136U5dZ&_nc_ohc=J3UCXnNHqhIAX-HwOsq&_nc_ht=scontent.fmex26-1.fna&oh=03_AdQ7VnahMQWh_kLymok9TVyGH-Ld1tgEIRhMQZRIP0_PfQ&oe=642CA37B" alt="Logo" class="img-fluid" width="60" >
           <a class="navbar-brand" href="#">
-            <div id="bank"></div>
-            BANCO DUCKSNAKE</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <div id="bank">BANCO DUCKSNAKE</a></div>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>-
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Cuenta.html">Crea una cuenta</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Operaciones.html">Iniciar Sesión</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="alert('Este apartado es solo para empleados, por favor inicia sesión para verificar que eres uno de ellos.')" >Administrar empleados</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contacto.html">Contáctanos</a>
-              </li>
-              
             </ul>
         
           </div>
-        </div>
-      </nav>
+    </nav>
+      
+      <style>
+        .form-container {
+          margin-bottom: 20px;
+        }
+      
+        .form-container label {
+          margin-bottom: 5px;
+        }
+      
+        .form-container input {
+          margin-bottom: 10px;
+        }
+      </style>
+      
       <div class="row justify-content-center">
-        <div class="col-md-3 mx-auto">
+        <div class="col-md-6 mx-auto">
           <div class="card text-center">
             <div class="card-body">
               <h5 class="card-title">¡Bienvenido!</h5>
-              <p class="card-text">Unete, crea tu cuenta o inicia sesión</p>
-              <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre"><br><br>
-      
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido"><br><br>
-                
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email"><br><br>
-                
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono"><br><br>
-                
-                <label for="saldo">Contraseña</label>
-                <input type="string" id="contrasenia" name="contrasenia"><br><br>
+              <p class="card-text">Unete, crea tu cuenta.</p>
+              <div class="form-group form-container">
+                <label for="nombre" class="text-left">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control text-left">
+        
+                <label for="apellido" class="text-left">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" class="form-control text-left">
+        
+                <label for="email" class="text-left">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control text-left">
+        
+                <label for="telefono" class="text-left">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control text-left">
+        
+                <label for="contrasenia" class="text-left">Contraseña</label>
+                <input type="password" id="contrasenia" name="contrasenia" class="form-control text-left">
+        
+                <button class="btn btn-success" id="boton" onclick="registrar()">Registrar cuenta</button>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-6 mx-auto">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Inicia sesión:</h5>
+              <p class="card-text"></p>
+              <div class="form-group form-container">
+                <label for="email" class="text-left">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control text-left">
+        
+                <label for="telefono" class="text-left">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control text-left">
+        
+                <label for="contrasenia" class="text-left">Contraseña</label>
+                <input type="password" id="contrasenia" name="contrasenia" class="form-control text-left">
+        
+                <button class="btn btn-success" id="boton" onclick="ingresar()">Ingresar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
         <div class="col-md-3 mx-auto">
           <div class="card text-center">
             <div class="card-body">
@@ -80,31 +104,7 @@
         <div class="col-md-3 mx-auto">
           <div class="card text-center">
             <div class="card-body">
-              <h3 class="card-title">¡Contáctanos!</h3>
-          <div id="bank-info">
-            
-
-            <!-- Aquí debes incluir el archivo que contiene la definición de la clase "BANCO1" -->
-
-            <script>
-              const bank = new BANCO1("Temascalapa", "5523241564", "bancosnake@gmail.com");
-
-              // Seleccionar el elemento HTML donde se desea mostrar
-              const bankInfoDiv = document.getElementById("bank-info");
-
-              const ubicacionElem = document.createElement("p");
-              ubicacionElem.textContent = "Ubicación: " + bank.ubicacion;
-              bankInfoDiv.appendChild(ubicacionElem);
-
-              const telefonoElem = document.createElement("p");
-              telefonoElem.textContent = "Teléfono: " + bank.telefono;
-              bankInfoDiv.appendChild(telefonoElem);
-
-              const correoElem = document.createElement("p");
-              correoElem.textContent = "Correo: " + bank.correo;
-              bankInfoDiv.appendChild(correoElem);
-            </script>
-          </div>
+              <h3 class="card-title">!</h3>
         </div>
       </div>
       </div>
