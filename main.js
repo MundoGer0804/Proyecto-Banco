@@ -26,14 +26,10 @@ function registrar(){
         document.getElementById("contrasenia").value = "";
     
     alert("Cuenta registrada correctamente");
-  
-  
-  cuentas.push(cuenta);
-}
-    
+  }
 
   
-function ActualizarDatos(){
+function ingresar(){
 
 
 }
