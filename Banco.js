@@ -1,30 +1,9 @@
-class Banco {
-    nombreBanco;
-    ubicacion;
-    telefono;
-    paginaWeb;
-    correo;
-    constructor(namebank, adress, rfc) {
-        this.nombreBanco = namebank;
-        this.ubicacion = adress;
-        this.telefono = 5665343254;
-    }
-
-    
-
-    /**
-     * @param {string} correo
-     * @returns
-     */
-    CheckEmail = function () {
-        this.correo = email;
-    }
-
-    /**
-     * @param {string} ubicacion
-     * @returns
-     */
-    CheckLocation = function () {
-        this.ubicacion = location;
-    }
+function BANCO1 (nombreBanco,ubicacion,telefono,correo){
+    this.nombre=nombreBanco;
+    this.ubicacion=ubicacion;
+    this.telefono=telefono;
+    this.correo=correo;
 }
+
+const bank = new BANCO1("Banco Snake","Temascalapa","5523241564","bancosnake@gmail.com");
+console.log(bank);

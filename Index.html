@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+      <script src="Banco.js">
+      </script>
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     
@@ -12,8 +15,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <img src="https://th.bing.com/th/id/R.072a288545397e6d207d1371eca99402?rik=KA96XVuf8q%2bI%2bA&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f0030%2f4227%2f9494%2fproducts%2fsolid-snake-01-amazon_1200x1200.jpg%3fv%3d1631761205&ehk=jHGEqJRkO7DGCsrj0Tg%2fP9SqwTV2XsZ6q%2bThNX2zdeo%3d&risl=&pid=ImgRaw&r=0" alt="Logo" class="img-fluid" width="60" >
-          <a class="navbar-brand" href="#">BANCO DUCKSNAKE</a>
+          <img src="https://scontent.fmex26-1.fna.fbcdn.net/v/t1.15752-9/332557695_1297594064127820_4097500698539536437_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFTK7ksrMePA42m8tnoJVU4cbr1HOpxhwBxuvUc6nGHAJFpvxcBSVfU8uyEp9wb2HrkrDXAKxy9qR-BN136U5dZ&_nc_ohc=J3UCXnNHqhIAX-HwOsq&_nc_ht=scontent.fmex26-1.fna&oh=03_AdQ7VnahMQWh_kLymok9TVyGH-Ld1tgEIRhMQZRIP0_PfQ&oe=642CA37B" alt="Logo" class="img-fluid" width="60" >
+          <a class="navbar-brand" href="#">
+            <div id="bank"></div>
+            BANCO DUCKSNAKE</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,7 +34,7 @@
                 <a class="nav-link" href="Operaciones.html">Iniciar Sesión</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Ae.html">Administrar empleados</a>
+                <a class="nav-link" onclick="alert('Este apartado es solo para empleados, por favor inicia sesión para verificar que eres uno de ellos.')" >Administrar empleados</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Contacto.html">Contáctanos</a>
@@ -56,21 +61,41 @@
             <div class="card-body">
               <h5 class="card-title">Administración (Solo empleados)</h5>
               <p class="card-text">Si eres trabajador de Banco DUCKSNAKE, aquí puedes ver tus datos:</p>
-              <a href="Ae.html" class="btn btn-primary">Iniciar</a>
+              <button class="btn btn-primary" id="boton" onclick="alert('Este apartado es solo para empleados, por favor inicia sesión para verificar que eres uno de ellos.')">Ir</a>
             </div>
           </div>
         </div>
         <div class="col-md-3 mx-auto">
           <div class="card text-center">
             <div class="card-body">
-              <h5 class="card-title">¡Contáctanos!</h5>
-              <h5 class="card-title" id="tel">Teléfono: </h5>
-              <h5 class="card-title">Correo:  </h5>
-            </div>
+              <h3 class="card-title">¡Contáctanos!</h3>
+          <div id="bank-info">
+            
+
+            <!-- Aquí debes incluir el archivo que contiene la definición de la clase "BANCO1" -->
+
+            <script>
+              const bank = new BANCO1("Temascalapa", "5523241564", "bancosnake@gmail.com");
+
+              // Seleccionar el elemento HTML donde se desea mostrar
+              const bankInfoDiv = document.getElementById("bank-info");
+
+              const ubicacionElem = document.createElement("p");
+              ubicacionElem.textContent = "Ubicación: " + bank.ubicacion;
+              bankInfoDiv.appendChild(ubicacionElem);
+
+              const telefonoElem = document.createElement("p");
+              telefonoElem.textContent = "Teléfono: " + bank.telefono;
+              bankInfoDiv.appendChild(telefonoElem);
+
+              const correoElem = document.createElement("p");
+              correoElem.textContent = "Correo: " + bank.correo;
+              bankInfoDiv.appendChild(correoElem);
+            </script>
           </div>
         </div>
       </div>
-      
+      </div>
       <script src="Banco.js"></script> 
       <script src="Persona.js"></script>
       <script src="Cuenta.js"></script>
