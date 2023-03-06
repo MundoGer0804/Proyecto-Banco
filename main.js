@@ -20,8 +20,7 @@ function registrar() {
       var cuentas = JSON.parse(localStorage.getItem("cuentas"));
     }
     
-    cuentas.push(cuenta);
-    localStorage.setItem("cuentas", JSON.stringify(cuentas));
+    
     
         document.getElementById("nombre").value = "";
         document.getElementById("apellido").value = "";
@@ -32,4 +31,5 @@ function registrar() {
     alert("Cuenta registrada correctamente");
   }
 
-  
+  cuentas.push(cuenta);
+    localStorage.setItem("cuentas", JSON.stringify(cuentas));
