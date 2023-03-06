@@ -31,6 +31,17 @@ function registrar(){
 
   
 function ingresar(){
+    actualizarTelefono = function(Telefono){
+            this.Telefono = Telefono;
+
+    }
+    actualizarContrasena = function(Contrasena){
+            this.#Contrasena = Contrasena;
+    }
+
+    actualizarCorreos_Resp = function(Correo_Resp){
+        this. Correo_Resp = Correo_Resp;
+    }
 
 
 }
