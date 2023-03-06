@@ -9,7 +9,7 @@ class Persona {
     Rfc;
     ClaveElect;
 
-    constructor(name,lastename,date,dom,rfc,clave,Tel,emal){
+    constructor(name,lastename,date,dom,rfc,clave,Tel,email){
         this.Nombre = name;
         this.Apellidos = lastename
         this.FechaNac = date;

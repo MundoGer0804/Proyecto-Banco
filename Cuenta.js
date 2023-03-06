@@ -1,17 +1,12 @@
 class Cajero extends Persona{
-    correo;
     Correo_Resp;
-    Telefono;
     Contrasena;
 
-    constructor(email, email2, phone, password){
-        this.correo = email;
+    constructor(email2, password){
+       super(Nombre,Apellidos,FechaNac,Telefono,Email,Domicilio,Rfc,ClaveElect);
         this.Correo_Resp = email2;
-        this.Telefono = phone;
         this.Contrasena = password;
     }
-
-
 
     /**
      * @param {string} correo
@@ -32,8 +27,6 @@ class Cajero extends Persona{
         this. Correo_Resp = Correo_Resp;
     }
 
-
-    
 }
 
     
