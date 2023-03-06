@@ -1,9 +1,9 @@
 class CajeroFinanciero extends Persona{
-    #NumeroEmpleado;
+    NumeroEmpleado;
     HorarioCajero;
-    #Sueldo;
+    Sueldo;
 
-    #MakeId= function(){
+    MakeId= function(){
         let name =  this.Nombre;
         return  name.charAt(0) + Math.floor(Math.random() * 1000);
 
@@ -16,17 +16,5 @@ class CajeroFinanciero extends Persona{
         this.HorarioCajero=schedule;
     }
 
-    CheckSalaryWeek=function(salary){
-        let horasTrabajadas;
-        let salarioPorHora;
-        let sueldoSemanal;
-
-        horasTrabajadas = prompt("Introduce las horas trabajadas en la semana:");
-        salarioPorHora = prompt("Introduce el salario por hora:");
-
-        sueldoSemanal = horasTrabajadas * salarioPorHora;
-
-        console.log("El sueldo semanal del empleado es de: " + sueldoSemanal + " pesos.");
-
-    }
+    
 }
