@@ -1,29 +1,30 @@
-class Banco{
+class Banco {
     nombreBanco;
     ubicacion;
     telefono;
     paginaWeb;
     correo;
-    constructor(namebank,adress,rfc){
-        this.nombreBanco=namebank;
-        this.ubicacion=adress;
+    constructor(namebank, adress, rfc) {
+        this.nombreBanco = namebank;
+        this.ubicacion = adress;
+        this.telefono = 5665343254;
     }
+
     
-UpdatePhoneNumber=function(phone){
-    this.telefono = phone;
-}
 
-/**
- * @param {string} correo
- */
-CheckEmail=function(){
-    this.correo = email;
-}
+    /**
+     * @param {string} correo
+     * @returns
+     */
+    CheckEmail = function () {
+        this.correo = email;
+    }
 
-/**
- * @param {string} ubicacion
- */
-CheckLocation=function(){
-    this.ubicacion=location;
-}
+    /**
+     * @param {string} ubicacion
+     * @returns
+     */
+    CheckLocation = function () {
+        this.ubicacion = location;
+    }
 }
