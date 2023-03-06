@@ -20,8 +20,6 @@ function registrar() {
       var cuentas = JSON.parse(localStorage.getItem("cuentas"));
     }
     
-    
-    
         document.getElementById("nombre").value = "";
         document.getElementById("apellido").value = "";
         document.getElementById("email").value = "";
