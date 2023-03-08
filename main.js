@@ -1,10 +1,33 @@
-function registrar(){
-  let data = {};
+
+/**let data = {};
+function registrar(e){
+  
     data.nombre=document.getElementById('name').value;
     data.apellido=document.getElementById('lastename').value;
     data.email=document.getElementById('email').value;
     data.telefono=document.getElementById('Tel').value;
     data.contrasenia=document.getElementById('password').value;
+    return data
+}**/
+var empleados = [];
+function crearEmpleado(e){
+    e.preventDefault();
+
+    let name =  document.getElementById('name');
+    let surname =  document.getElementById('lastename');
+    let email =  document.getElementById('email');
+    let telefono =  document.getElementById('Tel');
+    let contra =  document.getElementById('password');
+    
+    
+    let e1 = new Empleado (name.value, surname.value, email.value, telefono.value,contra.value);
+    console.log(e1);
+
+    empleados.push(e1);
+
+    localStorage.setItem("Empleado", JSON.stringify(empleados));
+         alert("Se guardo el empleado");
+    document.getElementById('name').value = '';
 }
     
 function logiUser(){
